@@ -1,0 +1,25 @@
+export class mandateDetails{
+    utilitycode:string;
+    createdby:string;
+    customerBankname:string;
+    customerIFSC:string;
+    entityName:string;
+    entityId:string;
+    amountRupees:string;
+    customer1:string;
+    ifsc1:string;
+    refrence1:string;
+    emailId:string;
+    debitType:string;
+    ifsc:string;
+    phoneNumber:string;
+    toDebit:string;
+    frequency:string;
+    enachMobileNo:string;
+    acNo:string;
+    fromDate:string;
+    todate:string;
+    sponsorBankName:string;
+    sponsorBankCode:string;
+    entityBusinessCode:string;
+}

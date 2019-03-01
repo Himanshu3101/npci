@@ -1,0 +1,137 @@
+.nav-list li a
+{
+    color: #fff;
+}
+.user-info{font-size: 16px;    color: #1a204a;}
+#divxmlData{padding-top: 10px;}
+.nav-list li a
+{
+    color: #1a204a;
+}
+.sidebar.h-sidebar .nav-list > li
+{
+    padding: 0px 4px 0px 4px;
+    border: none;
+}
+.sidebar.h-sidebar .nav-list > li > a
+{
+    line-height: 14px;
+    padding: 5px 6px;
+}
+#changePassword .form-group
+{
+    margin-bottom: 5%;
+}
+.mandateDetail li
+        {
+            list-style: none;
+            border-bottom: 1px dotted #cdcdcd;
+        }
+        .mandateDetail .form-group
+        {
+            margin-bottom: 1%;
+        }
+        .mandateDetail i
+        {
+            font-size: 15px;
+            margin-right: 3%;
+        }
+        #ContentPlaceHolder1_DivOTP input
+        {
+            margin-right: 3%;
+            height: 28px;
+            border: 1px solid #928d8d !important;
+        }
+        .otp
+        {
+            margin-left: 18%;
+        }
+        #ContentPlaceHolder1_AuthMode img
+        {
+            width: 40%;
+        }
+        #ContentPlaceHolder1_detaildiv img
+        {
+            width:28%
+        }
+        #ContentPlaceHolder1_DivOTP img
+        {
+             width:28%
+        }
+        .resendOTP
+        {
+            margin-left: 4%;
+        }
+        .voiceOTP
+        {
+            margin-left: 4%;
+        }
+         @media (min-width: 768px) and (max-width: 991px)
+         {
+              #ContentPlaceHolder1_DivOTP input[type=text]
+            {
+                width: 12%;
+            }
+            .otp
+            {
+                margin-left:6%;
+            }
+            .resendOTP {
+   margin-left: 0;
+}
+         }
+        @media (min-width: 450px) and (max-width: 767px)
+        {
+            #ContentPlaceHolder1_AuthMode img
+            {
+                width: 20%;
+            }
+             #ContentPlaceHolder1_detaildiv img
+        {
+            width:15%;
+        }
+        #ContentPlaceHolder1_DivOTP img
+        {
+             width:15%
+        }
+        .otp
+            {
+                margin-left:7%;
+            }
+             .resendOTP
+        {
+            margin-left: 0;
+        }
+        #ContentPlaceHolder1_DivOTP input[type=text]
+            {
+                width: 12%;
+            }
+        }
+        @media (min-width: 320px) and (max-width: 450px)
+        {
+            .resendOTP
+        {
+            margin-left: 0;
+        }
+            .otp
+            {
+                margin-left: 15px;
+            }
+            #ContentPlaceHolder1_DivOTP input[type=text]
+            {
+                width: 12%;
+            }
+            .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]
+            {
+                margin-left: -22px;
+            }
+            .form-group input
+            {
+                height: 23px;
+            }
+            .preloader
+            {
+                position: relative;
+                margin: 50% 0 0 45%;
+            }
+        }

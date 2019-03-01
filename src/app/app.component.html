@@ -1,0 +1,322 @@
+<div style="border-bottom: 1px solid #cdcdcd; clear: both;">
+     
+  <div class="col-md-12 col-sm-12 col-xs-12" id="logoutdiv" runat="server">
+      <div class="col-md-3 col-sm-4 col-xs-6 navbar-header pull-left no-padding">
+
+          <div style="width: 117px; height: 60px; clear: both; overflow: hidden;">
+              <img src="assets/img/zipsign-logo.png" style="width: 63%;">
+          </div>
+      </div>
+      <div id="Div1" class="" data-sidebar="true" data-sidebar-scroll="true" data-sidebar-hover="true"
+          style="margin: 0; right: 0; border-bottom: 1px solid #cdcdcd;">
+        
+          <div class="col-md-8 col-sm-6 col-xs-6 pull-right" id="welldiv" runat="server">
+            
+              <div class="navbar-buttons navbar-header pull-right adminddl" role="navigation">
+                  <ul class="nav ace-nav">
+                      <li class="light-blue dropdown-modal">
+                       
+                          <span class="user-info"> Welcome
+                          
+                          </span>
+          
+                      </li>
+                  </ul>
+              </div>
+              <!--sidebar responsive ace-save-state pull-right-->
+          </div>
+      </div>
+       <div id="FileUploadDiv" class="sidebar h-sidebar ace-save-state" style="top: 60%; position: absolute;right: 1%;" runat="server">
+      <div id="sidebar" class="">
+          <ul class="pull-right nav nav-list" style="bottom: 0px; border: none;">
+            
+              <li class="zoomin" id="liusers" runat="server"><a href="#"><i class="fa fa-user">
+              </i><span id="Span3" class="menu-text">Amarjeet Kumar</span> </a></li>
+          
+          </ul>
+      </div>
+  </div>
+  </div>
+ 
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12  main-content">
+  <div class="content">
+      <div id="overlay" runat="server" style="background: #fff; clear: both; overflow: auto;
+          display: block; width: 100%; height: 84%; z-index: 999;" class="col-xs-12 col-md-12 col-sm-12 overlay">
+      </div>
+      <div id="preloader_1" runat="server" style="display: none; z-index: 9999; position: absolute;"
+          class="preloader">
+          <span></span><span></span><span></span><span></span><span></span>
+          <label>
+              Loading...</label>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12" id="DataDiv" style="overflow-y: auto;">
+          <div class="col-md-12 col-sm-12 col-xs-12 no-padding" style="border: 1px solid #cdcdcd;
+              background: #ececec; margin: 1% 0 1% 0;">
+             
+              <div id="divxmlData"  class="col-md-12 col-sm-12 col-xs-12" style="height: 540px;">
+                  <span class="legal">Mandate Details:</span>
+                  <ul class="mandateDetail">
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Entity Business Code : {{entityBusinessCode}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblEntityBusinessCode" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Entity Name : {{entityName}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblEntityName" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> IFSC : {{ifsc}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblIFSC" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Sponsor Bank Name : {{sponsorBankName}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblSponsorBankName"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Reference 1 : {{Refrence1}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblRefrence1" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Customer Name : {{customerName}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblCustName" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Customer Bank Name : {{customerBankName}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblcustomerBankname" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Account No. : {{AccNo}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblAcNo" runat="server" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Customer IFSC : {{customerIFSC}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblcustomerIFSC"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> From Date : {{fromDate}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblFromDate"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> To Date : {{toDate}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblTODATE"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Amount in Rupees : {{amtRupees}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblAmountRupees" class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="form-group">
+                              <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                  <i class="fa fa-angle-double-right"></i> Phone Number : {{phoneNumber}}
+                              </label>
+                              <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                  <label id="lblPhoneNumber"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                      for="form-field-1">
+                                  </label>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12" id="consentscroll" >
+          <div class="col-md-12 col-sm-12 col-xs-12 no-padding" style="background: #fff; border: 1px solid #cdcdcd;
+              overflow-y: auto; height: 542px; margin: 1% 0 1% 0;">
+              <div class="col-md-12 col-sm-12 col-xs-12"  id="consentDiv" style="text-align: justify;
+                  height: 540px;" *ngIf="show">
+                  <h3 style="text-align: center">
+                      Consent for Authentication</h3>
+                  <p style="text-align: center; font-weight: bold;">
+                      Yoeki Soft Private Limited</p>
+                  <p>
+                      Please check the box to provide your consent to the below option.</p>
+                  <p>
+                        <input type="radio" name="radio1">
+                      By continuing, I agree to do eKyc using Aadhaar to eSign with one of ESPs (CDAC).
+                      Yoeki Soft is registered as ASP.
+                  </p>
+             
+                  <p style="text-align: center; font-weight: bold;">
+                      OR</p>
+                  <p style="margin: 0;">
+                      <input type="radio" name="radio1">
+                      I do not wish to authenticate myself with the Aadhaar based Authentication system
+                      for Authentication of my identity. However, I do understand that if at any time
+                      I wish to authenticate myself with the Aadhaar based Authentication system I need
+                      to provide consent to Yoeki Soft Private Limited to provide my Aadhaar number, and
+                      Authentication Mode (Biometric and/or OTP).
+                  </p>
+               <p> <input type="submit" (click)="showHide()"  value="Submit" id="btnAgree" class="btn btn-primary  pull-right" style="margin-bottom: 8px; position: absolute; bottom: 100px; right: 0;"></p>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 divcont" id="AllDiv" *ngIf="hide">
+                  <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                      <div class="col-md-12 col-sm-12 col-xs-12" visible="false"  id="AuthMode"
+                          style="margin-top: 6%;">
+                          <h4 style="text-align: center; font-size: 24px; font-weight: bold;">
+                              Authentication Mode</h4>
+                         
+                          <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                              <img src="assets/img/touch-icon.png" alt="" style="margin: 4% 0 7% 0" />
+                          </div>
+                          <div class="pophead" style="height: 20px;">
+                          </div>
+                          <div class="col-md-11 col-sm-11 col-xs-11 text-center" style="margin-left: 6%">
+
+                            <!-- <form [formGroup]="bankingSelection" (ngSubmit)="_cardSelected()"> -->
+
+                              <div class="form-group">
+                                  <label class="col-sm-12 col-md-4 col-xs-12 control-label no-padding" for="form-field-1">
+                                      Choose Authentication Mode
+                                  </label>
+                                  <div id="Div13" class="col-sm-12 col-md-8 col-xs-12 no-padding radio">
+                                      <label id="lblotp" class="lblradiobtnss col-md-4 col-sm-6 col-xs-6 no-padding">
+                                        <input type="radio" name="radio">
+                                          <span>Net Banking</span>
+                                      </label>
+                                      <label id="lblfinger" class="lblradiobtnss col-md-5 col-sm-6 col-xs-6 no-padding">
+                                      <input type="radio" name="radio">
+                                          <span>Debit Card</span>
+                                      </label>
+                                  </div>
+                              </div>
+                            <!-- </form> -->
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                             
+                          </div>
+                      </div>
+                      
+                      
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="Diverr" style="display: none" class="popupmandate">
+      <div class="col-md-12 col-sm-12 col-xs-12 no-padding" style="text-align: center">
+
+          <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 1% 0 1% 0;">
+          <!-- <img src="assets/img/caution.png" style=" width: 50px; height:  auto;"> -->
+              <div class="form-group">
+                  <label id="lblerr" class="col-md-12 col-sm-12 col-xs-12 control-label no-padding"
+                      for="form-field-1">
+                      Request File does not exist
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="popclose close" id="errpopclose" style="right: 2px;" onclick="closePopup()">
+          <label class="">
+              X</label>
+      </div>
+  </div>
+</div>
+<div class="footer-inner" id="divFooter">
+  <div class="footer-content">
+      <span class="bigger-120"><span class="blue bolder" style="color: #cdcdcd;">ZipSign</span>
+          Application &copy; 2018 </span>
+      <div class=" pull-right logo">
+          <img src="assets/img/logo1.png" class="pull-right image" alt="" />
+      </div>
+      <span id="lblDate" class=" pull-right" ></span>
+  </div>
+</div>
