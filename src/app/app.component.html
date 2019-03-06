@@ -296,7 +296,7 @@
                                   </label>
                                   <div id="Div13" class="col-sm-12 col-md-8 col-xs-12 no-padding radio">
                                       <label id="lblotp" class="lblradiobtnss col-md-4 col-sm-6 col-xs-6 no-padding">
-                                        <input type="radio" name="radio">
+                                        <input type="radio" name="radio" checked="{{checked}}">
                                           <span>Net Banking</span>
                                       </label>
                                       <label id="lblfinger" class="lblradiobtnss col-md-5 col-sm-6 col-xs-6 no-padding">
@@ -307,7 +307,7 @@
                                   </div>
                                   
                               </div>
-                              <p> <input type="submit"   value="Submit" id="btnAgree" class="btn btn-primary  pull-right" ></p>
+                              <p> <input type="submit"  (click)="parmeterNPCIsend()" value="Submit" id="btnAgree" class="btn btn-primary  pull-right" ></p>
                             <!-- </form> -->
                           </div>
                           <div class="col-md-12 col-sm-12 col-xs-12">

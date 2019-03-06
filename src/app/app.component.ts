@@ -11,6 +11,7 @@ import { stringify } from 'querystring';
 export class AppComponent implements OnInit{
 public show:boolean = true;
 public hide:boolean = false;
+public checked = "";
 
   constructor(private _MandateDetailsService : MandateDetailsService){
   }
@@ -74,15 +75,36 @@ public hide:boolean = false;
         this.phoneNumber=this.objMandate[0].phoneNumber;
         this.netBanking=this.objMandate[0].netBanking;
         this.debitCard=this.objMandate[0].debitCard;
-        console.log('objmandate',this.objMandate);
+        // console.log('objmandate',this.objMandate);
+        this.selectionSet();
       }
     )
-
-
     console.log();
+    
+    
+  }
+
+  selectionSet(){
+  if(this.debitCard=="1" && this.netBanking=="1"){
+      this.checked="checked";
+    }else if(this.netBanking=="1"){
+      this.checked="!checked";
+    }else if(this.debitCard=="1"){
+      this.checked="checked";
+    }
   }
   
  
+  parmeterNPCIsend(){
+    if(this.debitCard=="1" && this.netBanking=="1"){
+      this.checked="checked";
+    }else if(this.netBanking=="1"){
+      this.checked="!checked";
+    }else if(this.debitCard=="1"){
+      this.checked="checked";
+    }
+    alert("aa");
+  }
 
   showHide(){
 	  this.show = false;
