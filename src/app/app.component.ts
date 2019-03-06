@@ -11,6 +11,7 @@ import { stringify } from 'querystring';
 export class AppComponent implements OnInit{
 public show:boolean = true;
 public hide:boolean = false;
+public checked = "";
 
   constructor(private _MandateDetailsService : MandateDetailsService){
   }
@@ -31,6 +32,8 @@ public hide:boolean = false;
   toDate:string;
   amtRupees:string;
   phoneNumber:string;
+  netBanking:string;
+  debitCard:string;
 
   ngOnInit(){
 
@@ -50,7 +53,7 @@ public hide:boolean = false;
 
     var oMandate = new mandatebody();
    
-    oMandate.MandateId = '2';
+    oMandate.MandateId = '1';
     oMandate.QueryType = "XMLMandate";
 
     this._MandateDetailsService.post(oMandate)
@@ -70,15 +73,38 @@ public hide:boolean = false;
         this.toDate=this.objMandate[0].todate;
         this.amtRupees=this.objMandate[0].amountRupees;
         this.phoneNumber=this.objMandate[0].phoneNumber;
-        console.log('objmandate',this.objMandate);
+        this.netBanking=this.objMandate[0].netBanking;
+        this.debitCard=this.objMandate[0].debitCard;
+        // console.log('objmandate',this.objMandate);
+        this.selectionSet();
       }
     )
-
-
     console.log();
+    
+    
+  }
+
+  selectionSet(){
+  if(this.debitCard=="1" && this.netBanking=="1"){
+      this.checked="checked";
+    }else if(this.netBanking=="1"){
+      this.checked="!checked";
+    }else if(this.debitCard=="1"){
+      this.checked="checked";
+    }
   }
   
  
+  parmeterNPCIsend(){
+    if(this.debitCard=="1" && this.netBanking=="1"){
+      this.checked="checked";
+    }else if(this.netBanking=="1"){
+      this.checked="!checked";
+    }else if(this.debitCard=="1"){
+      this.checked="checked";
+    }
+    alert("aa");
+  }
 
   showHide(){
 	  this.show = false;
