@@ -22,4 +22,6 @@ export class mandateDetails{
     sponsorBankName:string;
     sponsorBankCode:string;
     entityBusinessCode:string;
+    netBanking:string;
+    debitCard:string;
 }

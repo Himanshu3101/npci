@@ -31,6 +31,8 @@ public hide:boolean = false;
   toDate:string;
   amtRupees:string;
   phoneNumber:string;
+  netBanking:string;
+  debitCard:string;
 
   ngOnInit(){
 
@@ -50,7 +52,7 @@ public hide:boolean = false;
 
     var oMandate = new mandatebody();
    
-    oMandate.MandateId = '2';
+    oMandate.MandateId = '1';
     oMandate.QueryType = "XMLMandate";
 
     this._MandateDetailsService.post(oMandate)
@@ -70,6 +72,8 @@ public hide:boolean = false;
         this.toDate=this.objMandate[0].todate;
         this.amtRupees=this.objMandate[0].amountRupees;
         this.phoneNumber=this.objMandate[0].phoneNumber;
+        this.netBanking=this.objMandate[0].netBanking;
+        this.debitCard=this.objMandate[0].debitCard;
         console.log('objmandate',this.objMandate);
       }
     )

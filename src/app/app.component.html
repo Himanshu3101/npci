@@ -213,6 +213,32 @@
                               </div>
                           </div>
                       </li>
+
+                      <li>
+                        <div class="form-group">
+                            <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                <i class="fa fa-angle-double-right"></i> Net Banking 
+                            </label>
+                            <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                <label id="lblPhoneNumber"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                    for="form-field-1"> : {{netBanking}}
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-6 col-md-4 col-xs-6 control-label no-padding" for="form-field-1">
+                                <i class="fa fa-angle-double-right"></i> Debit Card
+                            </label>
+                            <div class="col-sm-6 col-md-7 col-xs-6 no-padding">
+                                <label id="lblPhoneNumber"  class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                    for="form-field-1"> : {{debitCard}}
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    
                   </ul>
               </div>
           </div>
@@ -244,7 +270,9 @@
                       to provide consent to Yoeki Soft Private Limited to provide my Aadhaar number, and
                       Authentication Mode (Biometric and/or OTP).
                   </p>
-               <p> <input type="submit" (click)="showHide()"  value="Submit" id="btnAgree" class="btn btn-primary  pull-right" style="margin-bottom: 8px; position: absolute; bottom: 100px; right: 0;"></p>
+                <p>
+                    <input type="submit" (click)="showHide()"  value="Submit" id="btnAgree" class="btn btn-primary  pull-right" style="margin-bottom: 8px; position: absolute; bottom: 100px; right: 0;">
+                </p>
               </div>
               <div class="col-md-12 col-sm-12 col-xs-12 divcont" id="AllDiv" *ngIf="hide">
                   <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
@@ -275,8 +303,11 @@
                                       <input type="radio" name="radio">
                                           <span>Debit Card</span>
                                       </label>
+                                      
                                   </div>
+                                  
                               </div>
+                              <p> <input type="submit"   value="Submit" id="btnAgree" class="btn btn-primary  pull-right" ></p>
                             <!-- </form> -->
                           </div>
                           <div class="col-md-12 col-sm-12 col-xs-12">
