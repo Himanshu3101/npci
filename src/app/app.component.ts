@@ -8,10 +8,12 @@ import { stringify } from 'querystring';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  public show: boolean = true;
-  public hide: boolean = false;
-  public checked = "";
+
+export class AppComponent implements OnInit{
+public show:boolean = true;
+public hide:boolean = false;
+public checked = "";
+public disable = "";
 
   constructor(private _MandateDetailsService: MandateDetailsService) {
   }
@@ -84,13 +86,19 @@ export class AppComponent implements OnInit {
 
   }
 
-  selectionSet() {
-    if (this.debitCard == "1" && this.netBanking == "1") {
-      this.checked = "checked";
-    } else if (this.netBanking == "1") {
-      this.checked = "!checked";
-    } else if (this.debitCard == "1") {
-      this.checked = "checked";
+
+  selectionSet(){
+  if(this.debitCard=="1" && this.netBanking=="1"){
+      this.checked="checked";
+    }else if(this.netBanking=="1"){
+      this.checked="!checked";
+     
+      
+    }else if(this.debitCard=="1"){
+      this.checked="checked";
+      this.disable="disable";
+
+ 
     }
   }
 
