@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
 public show:boolean = true;
 public hide:boolean = false;
 public checked = "";
+public disable = "";
 
   constructor(private _MandateDetailsService : MandateDetailsService){
   }
@@ -89,8 +90,11 @@ public checked = "";
       this.checked="checked";
     }else if(this.netBanking=="1"){
       this.checked="!checked";
+     
+      
     }else if(this.debitCard=="1"){
       this.checked="checked";
+      this.disable="disable";
     }
   }
   
