@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MandateDetailsService } from './MandateDetailsService.service';
 import { mandateDetails } from './mandateDetails';
 import { mandatebody } from './mandatebody';
+import {FormControl, FormGroup, FormBuilder} from '@angular/forms';
 import { stringify } from 'querystring';
 @Component({
   selector: 'app-root',
@@ -9,9 +10,13 @@ import { stringify } from 'querystring';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
   public show: boolean = true;
   public hide: boolean = false;
-  public checked = "";
+  public checkeddebit = "";
+  public checkednetbanking = "";
+  public disabldebit: boolean = false;
+  public disablnetbanking: boolean = false;
 
   constructor(private _MandateDetailsService: MandateDetailsService) {
   }
@@ -36,7 +41,7 @@ export class AppComponent implements OnInit {
   debitCard: string;
 
   ngOnInit() {
-
+   
     // this._MandateDetailsService.getcomments()
     // .subscribe(
     //   data=>{
@@ -56,6 +61,10 @@ export class AppComponent implements OnInit {
     oMandate.MandateId = '1';
     oMandate.QueryType = "XMLMandate";
 
+    this.debitCard = "1";
+    this.netBanking = "0";
+    this.selectionSet();
+
     this._MandateDetailsService.post(oMandate)
       .subscribe(
         data => {
@@ -74,7 +83,8 @@ export class AppComponent implements OnInit {
           this.amtRupees = this.objMandate[0].amountRupees;
           this.phoneNumber = this.objMandate[0].phoneNumber;
           this.netBanking = this.objMandate[0].netBanking;
-          this.debitCard = this.objMandate[0].debitCard;
+          this.debitCard = "1";
+          //this.debitCard = this.objMandate[0].debitCard;
           // console.log('objmandate',this.objMandate);
           this.selectionSet();
         }
@@ -86,25 +96,38 @@ export class AppComponent implements OnInit {
 
   selectionSet() {
     if (this.debitCard == "1" && this.netBanking == "1") {
-      this.checked = "checked";
+      this.checkeddebit = "";
+      this.checkednetbanking = "";
+      this.disabldebit = false;
+      this.disablnetbanking = false;
+      console.log(this.disabldebit);
+      //alert("1");
     } else if (this.netBanking == "1") {
-      this.checked = "!checked";
+      this.checkednetbanking = "checked";
+      this.disabldebit = true;
+      //alert("2");
     } else if (this.debitCard == "1") {
-      this.checked = "checked";
+      this.checkeddebit = "checked";
+      this.disablnetbanking = true;
+      //alert("3");
+    } else {
+      this.disabldebit = false;
+      this.disablnetbanking = false;
+      //alert("4");
     }
   }
 
 
-  parmeterNPCIsend() {
-    if (this.debitCard == "1" && this.netBanking == "1") {
-      this.checked = "checked";
-    } else if (this.netBanking == "1") {
-      this.checked = "!checked";
-    } else if (this.debitCard == "1") {
-      this.checked = "checked";
-    }
-    alert("aa");
-  }
+  // parmeterNPCIsend() {
+  //   if (this.debitCard == "1" && this.netBanking == "1") {
+  //     this.checked = "checked";
+  //   } else if (this.netBanking == "1") {
+  //     this.checked = "!checked";
+  //   } else if (this.debitCard == "1") {
+  //     this.checked = "checked";
+  //   }
+  //   alert("aa");
+  // }
 
   showHide() {
     this.show = false;
