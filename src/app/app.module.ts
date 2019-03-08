@@ -4,7 +4,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MandateDetailsService} from './MandateDetailsService.service';
-import { ReactiveFormsModule } from '@angular/forms';   
+import { ReactiveFormsModule,  FormsModule } from '@angular/forms';   
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [MandateDetailsService],
   bootstrap: [AppComponent]
