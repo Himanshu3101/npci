@@ -12,6 +12,7 @@ import * as $ from 'jquery';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   now: number;
 
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit {
   public disabldebit: boolean = false;
   public disablnetbanking: boolean = false;
 
+
   constructor(private _MandateDetailsService: MandateDetailsService, private formBuilder: FormBuilder) {
     setInterval(() => {
       this.now = Date.now();
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit {
 
 
   }
+
 
 
 
@@ -85,7 +88,7 @@ export class AppComponent implements OnInit {
     oMandate.QueryType = "XMLMandate";
 
     this.debitCard = "1";
-    this.netBanking = "1";
+    this.netBanking = "0";
     this.selectionSet();
 
     this._MandateDetailsService.post(oMandate)
@@ -117,6 +120,7 @@ export class AppComponent implements OnInit {
 
   }
 
+
   selectionSet() {
     if (this.debitCard == "1" && this.netBanking == "1") {
       this.checkeddebit = "";
@@ -137,6 +141,7 @@ export class AppComponent implements OnInit {
       this.disabldebit = false;
       this.disablnetbanking = false;
       //alert("4");
+
     }
   }
 
