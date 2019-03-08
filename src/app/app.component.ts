@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MandateDetailsService } from './MandateDetailsService.service';
 import { mandateDetails } from './mandateDetails';
 import { mandatebody } from './mandatebody';
-import {FormControl, FormGroup, FormBuilder} from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { stringify } from 'querystring';
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +14,9 @@ import { stringify } from 'querystring';
 })
 
 export class AppComponent implements OnInit {
-  
+  now: number;
+
+  registerForm: FormGroup;
   public show: boolean = true;
   public hide: boolean = false;
   public checkeddebit = "";
@@ -20,8 +25,17 @@ export class AppComponent implements OnInit {
   public disablnetbanking: boolean = false;
 
 
-  constructor(private _MandateDetailsService: MandateDetailsService) {
+  constructor(private _MandateDetailsService: MandateDetailsService, private formBuilder: FormBuilder) {
+    setInterval(() => {
+      this.now = Date.now();
+    }, 1);
+
+
   }
+
+
+
+
 
   // lstMandate:mandateDetails[];
   objMandate: mandateDetails;
@@ -41,8 +55,18 @@ export class AppComponent implements OnInit {
   phoneNumber: string;
   netBanking: string;
   debitCard: string;
+  fun(){   
+       var radioValue = $("input[name='radio']:checked").val();
+       console.log(radioValue);
+    }
 
   ngOnInit() {
+  //   $(document).ready(function(){
+  //     $("#btn").click(function(){
+  //     var radioValue = $("input[name='radio']:checked").val();
+  //    console.log(radioValue);
+  //   });
+  // });
    
     // this._MandateDetailsService.getcomments()
     // .subscribe(
@@ -84,8 +108,8 @@ export class AppComponent implements OnInit {
           this.toDate = this.objMandate[0].todate;
           this.amtRupees = this.objMandate[0].amountRupees;
           this.phoneNumber = this.objMandate[0].phoneNumber;
-          this.netBanking = this.objMandate[0].netBanking;
-          this.debitCard = "1";
+          // this.netBanking = this.objMandate[0].netBanking;
+          // this.debitCard = "0";
           //this.debitCard = this.objMandate[0].debitCard;
           // console.log('objmandate',this.objMandate);
           this.selectionSet();
@@ -133,8 +157,11 @@ export class AppComponent implements OnInit {
   //   alert("aa");
   // }
 
+
   showHide() {
     this.show = false;
     this.hide = true;
   }
+
+
 }
