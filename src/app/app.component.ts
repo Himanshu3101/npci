@@ -9,6 +9,7 @@ import { stringify } from 'querystring';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   
   public show: boolean = true;
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
   public checkednetbanking = "";
   public disabldebit: boolean = false;
   public disablnetbanking: boolean = false;
+
 
   constructor(private _MandateDetailsService: MandateDetailsService) {
   }
@@ -94,6 +96,7 @@ export class AppComponent implements OnInit {
 
   }
 
+
   selectionSet() {
     if (this.debitCard == "1" && this.netBanking == "1") {
       this.checkeddebit = "";
@@ -114,6 +117,7 @@ export class AppComponent implements OnInit {
       this.disabldebit = false;
       this.disablnetbanking = false;
       //alert("4");
+
     }
   }
 
